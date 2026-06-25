@@ -1,0 +1,52 @@
+{
+  "lookback_bars": 250,
+  "min_bars": 180,
+  "top_n": 5,
+  "regular_min_trades": 20,
+  "lowfreq_min_trades": 5,
+  "liquidity_quantile": 0.25,
+  "max_stale_calendar_days": 10,
+  "source_mode": "sina_continuous_index",
+  "factor_thresholds": {
+    "min_factors_range": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "net_gap_range": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "score_weights": {
+    "win_rate": 0.4,
+    "avg_return": 0.25,
+    "profit_factor": 0.15,
+    "drawdown": 0.1,
+    "trades": 0.1
+  },
+  "output_dir": "output",
+  "database_dir": "database",
+  "exclude_symbols": [
+    "BB0",
+    "FB0",
+    "JR0",
+    "LR0",
+    "PM0",
+    "RI0",
+    "WH0",
+    "RS0",
+    "WR0"
+  ],
+  "preferred_symbols": [],
+  "mock_mode": false,
+  "enable_intraday_realtime_snapshot": true,
+  "intraday_snapshot_note": "交易时段运行时使用futures_zh_spot抓取主力合约实时快照；盘后仍使用完整日线，不覆盖数据库。",
+  "range_stats_window": 10
+}

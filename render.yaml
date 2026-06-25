@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: futures-scanner
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PYTHONUTF8
+        value: "1"
+      - key: PYTHONIOENCODING
+        value: utf-8
+    region: singapore
+    disk:
+      name: data
+      mountPath: /app/output
+      sizeGB: 1
